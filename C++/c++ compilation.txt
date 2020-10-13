@@ -1,0 +1,28 @@
+Processes and commands done in compilation of C++ programs.
+
+Bonus :: Compiler does not watch over the function declaration sequence but a linker does.
+
+1>Preprocessing
+In this comments are trimmed and # act as it's
+directive and preprocessing is done.
+COMMAND: g++ -E file.cpp
+file is saved with extension (.i)
+
+2>Compilation 
+Translation to assembly code
+COMMAND: g++ -S file.cpp 
+and  file is saved as file.S
+
+3>Assembler 
+Translate assembly code to object code 
+COMMAND : g++ -c file.cpp
+opening file.o gives the encoded formatted object code.
+od -c file.o gives the object code in human readable
+manner
+
+4>Linking
+object code now consist of machine instructions
+,but some pieces are missing or in different
+order ,these are linked using linker.
+g++ file.cpp -o obj 
+Finally a compiled code is ready and execution is done by ./obj (linux) due to creation of executable file obj.exe.
