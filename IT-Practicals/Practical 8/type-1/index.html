@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Practical 8</title>
+    <style type="text/css">
+        .container {
+            width: 70%;
+            margin: auto;
+            align-items: center;
+            background-color: #D9CAB3;
+            padding-bottom: 10px;
+        }
+
+        .info-table {
+            width: 80%;
+            margin: auto;
+            border: 3px solid black;
+            border-collapse: collapse;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+
+        .table-row {
+            width: 100%;
+            margin: auto;
+        }
+
+        .table-data {
+            width: 50%;
+            border: 2px solid white;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="heading">Bsc Hons Computer Science</h1>
+        <table>
+            <tr>
+                <td>Fee</td>
+                <td>25644</td>
+            </tr>
+            <tr>
+                <td>Eligibility Criteria</td>
+                <td>10-12 Pass</td>
+            </tr>
+            <tr>
+                <td>Subjects and credit scores</td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Credit score</th>
+                        </tr>
+                        <tr>
+                            <td>IT</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>Toc</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>DAV</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>DIP/Micro</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Future Opportunities</td>
+                <td>Bohot scope h isme</td>
+            </tr>
+        </table>
+    </div>
+
+    <button id="btn-style">
+        Style Page
+    </button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btn-style').click(function () {
+                $("div").addClass('container');
+                $("table").addClass('info-table');
+                $("tr").addClass('table-row');
+                $("td").addClass('table-data');
+                $(".heading").css({
+                    "textAlign": 'center'
+                });
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

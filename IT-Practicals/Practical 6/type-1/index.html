@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Practical 6</title>
+	<style type="text/css">
+		.container{
+			width: 60%;
+			margin: auto;
+			border: 1px solid black;
+			border-radius: 8px;
+			padding: 50px;
+
+		}
+		.btn-submit{
+			border-radius: 5px;
+			color: white;
+			background: greenyellow;
+			font-weight: bold;
+			font-size: 1rem;
+			margin: 20px;
+		}
+		@media(width<=575){
+			.container{
+				width: 84%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Pet's Information</h1>
+		<hr>
+		<label for="name">Pet's Name: </label>
+		<input type="text" name="name"><br><br>
+		<label for="age">Age: </label>
+		<input type="number" name="age">
+		<label for="weight">Weight: </label>
+		<input type="number" name="weight" class=""><br><br>
+		<label for="type">Pet type: </label>
+		<input type="text" name="type"><br><br>
+		<label for="likes">Likes: </label>
+		<input type="text" name="likes"><br>
+		<button class="btn-submit" onclick="display()">Submit</button>
+	</div>
+
+	<script type="text/javascript">
+
+		function display(){
+			// event.preventDafault();
+			var pet = {};
+			var input_fields = document.getElementsByTagName('input');
+			for (var i = 0; i < input_fields.length; i++) {
+				pet[input_fields[i].name] = input_fields[i].value;
+			}
+			console.log(pet);
+
+		}
+		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+MAIN COLOR: #099268
+GREY COLOR: #087f5b
+ACCENT: #20c997, #e6fcf5
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    width: 850px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    align-items: center;
+  }
+  
+  .container {
+    background-color: #e6fcf5;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 30px 0 rgb(0, 0, 0, 0.07);
+  }
+  
+  .form {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    align-items: center;
+    row-gap: 30px;
+  }
+  
+  h2 {
+    background-color: #099268;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 20px;
+    color: #e6fcf5;
+    margin-bottom: 52px;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+  }
+  
+  .submit-btn {
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #099268;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    align-self: end;
+    letter-spacing: 2px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #087f5b;
+    cursor: pointer;
+  }
+  
+  label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #20c997;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+  }
+  
+  .form input {
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+  }

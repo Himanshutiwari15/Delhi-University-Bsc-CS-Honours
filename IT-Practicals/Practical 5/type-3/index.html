@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practical 5</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		.btn-box{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			border: 1px solid black;
+			padding: 10px;
+		}
+		.color, .fontSize, .fontStyle{
+			width: 30%;
+			min-width: 350px;
+			height: 35px;
+			/*margin: auto;*/
+			margin-bottom: 10px;
+			border: 1px solid #F3F1F5;
+			box-shadow: 4px 4px 5px #B42B51;
+			border-radius: 10px;
+			color: #F3F1F5;
+			background-color: #420516;
+			font-weight: bold;
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Changing style of Below given paragraph</h1>
+	<p id="container">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+	</p>
+	<div class="btn-box">
+		<button class="color">Red</button>
+		<button class="color">Blue</button>
+		<button class="color">Green</button>
+	</div>
+	<div class="btn-box">
+		<button class="fontSize">10</button>
+		<button class="fontSize">20</button>
+		<button class="fontSize">30</button>
+	</div>
+	<div class="btn-box">
+		<button class="fontStyle">'Courier New', monospace</button>
+		<button class="fontStyle">'Brush Script MT', cursive</button>
+		<button class="fontStyle">Verdana, sans-serif</button>
+	</div>
+
+	<script type="text/javascript">
+
+		var colors = document.getElementsByClassName("color");
+		var fontSizes = document.getElementsByClassName("fontSize");
+		var fontStyles = document.getElementsByClassName("fontStyle");
+		var element = document.getElementById('container');
+
+		for (var i = 0; i < colors.length; i++) {
+    		colors[i].addEventListener('click', changeColor);
+		}
+
+		for (var i = 0; i < fontSizes.length; i++) {
+    		fontSizes[i].addEventListener('click', changeFontSize);
+		}
+
+		for (var i = 0; i < fontStyles.length; i++) {
+    		fontStyles[i].addEventListener('click', changeFontStyle);
+		}
+
+		function changeColor(){
+			// console.log(this.innerHTML);
+			element.style.color = this.innerHTML;
+		}
+
+		function changeFontSize(){
+			// console.log(this.innerHTML);
+			element.style.fontSize = this.innerHTML + "px";
+		}
+
+		function changeFontStyle(){
+			// console.log(this.innerHTML);
+			element.style.fontFamily = this.innerHTML;
+		}
+		
+	</script>
+
+</body>
+</html>

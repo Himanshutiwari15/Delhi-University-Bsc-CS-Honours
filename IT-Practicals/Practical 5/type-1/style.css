@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    background-color: #f7f7f7;
+    width: 120rem;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-family: sans-serif;
+    font-weight: normal;
+    color: palevioletred;
+    font-size: 28px;
+    width: 700px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  .paragraph {
+    border: 3px solid #228b22;
+    padding: 20px;
+    font-size: 18px;
+    margin: 40px auto;
+    font-family: serif;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    gap: 20px;
+    padding: 40px 50px;
+  }
+  
+  .el {
+    cursor: pointer;
+    font-family: sans-serif;
+    padding: 1.6rem 3.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #333;
+    color: #f7f7f7;
+    border: none;
+    transition: all 0.4s;
+    font-size: 1.8rem;
+  }
+  
+  .el:focus {
+    box-shadow: 0 0 0 0.8rem rgba(217, 119, 242, 0.877);
+  }
+  
+  .el--1:hover {
+    background-color: #f03e3e;
+  }
+  
+  .el--2:hover {
+    background-color: #37b24d;
+  }
+  
+  .el--3:hover {
+    background-color: #1c7ed6;
+  }
+  
+  .el--4:hover {
+    background-color: #222;
+  }
+  
+  .el--5:hover {
+    background-color: #222;
+  }
+  
+  .el--6:hover {
+    background-color: #222;
+  }
+  
+  .el--7:hover {
+    background-color: #223;
+  }
+  
+  .el--8:hover {
+    background-color: #222;
+  }
+  
+  .el--9:hover {
+    background-color: #222;
+  }
+  
+  .red-text {
+    color: #f03e3e;
+  }
+  
+  .green-text {
+    color: #37b24d;
+  }
+  
+  .blue-text {
+    color: #1c7ed6;
+  }
+  
+  .small-text {
+    font-size: 10px;
+  }
+  
+  .md-text {
+    font-size: 20px;
+  }
+  
+  .large-text {
+    font-size: 30px;
+  }
+  
+  .sans-serif-text {
+    font-family: sans-serif;
+  }
+  
+  .cursive-text {
+    font-family: cursive;
+  }
+  
+  .monospace-text {
+    font-family: monospace;
+  }

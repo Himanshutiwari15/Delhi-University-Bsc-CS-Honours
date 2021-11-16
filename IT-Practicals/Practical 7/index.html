@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Practical 7</title>
+	<style type="text/css">
+		#pet-data{
+			border: 1px solid black;
+			border-radius: 10px;
+			border-collapse: collapse;
+		}
+		td{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		#btn-fetch{
+			margin-top: 20px;
+			font-size: 24px;
+			font-weight: bold;
+			background-color: black;
+			color: white;
+			border-radius: 8px;
+		}
+	</style>
+</head>
+<body>
+	<!-- <table id="pet-data">
+		<thead>
+			<tr>
+				<td>ID</td>
+				<td>Title</td>
+				<td>Body</td> -->
+				<!-- <td>Type</td>
+				<td>Likes</td> -->
+			<!-- </tr>
+		</thead>
+		<tbody id="content">
+		</tbody>
+	</table> -->
+
+	<div id="content">
+		
+	</div>
+
+	<button id="btn-fetch">Fetch Data</button>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		// $("#btn-fetch").click(function(){
+		//   $.ajax({
+		//   		type: "Get",
+		// 	    url: "https://jsonplaceholder.typicode.com/posts",
+		// 	    dataType: "json", 
+		// 	    success: function(result){
+		//    			 console.log(result);
+		//   			}
+		// 	});
+		// });
+		var btnFetch = document.getElementById('btn-fetch');
+		var content = document.getElementById('content');
+
+		btnFetch.addEventListener('click', ()=>{
+			const xhr = new XMLHttpRequest();
+
+			xhr.open("GET",'/pet.json',true);
+
+			xhr.onload = ()=>{
+				console.log(xhr.responseText);
+				renderHtml(JSON.parse(xhr.responseText));
+			}
+
+			xhr.send();
+
+		});
+
+		function renderHtml(data){
+			content.innerHTML = "";
+			for (var i = 0; i <= data.length; i++) {
+				let p = document.createElement('p');
+				let htmlpart = "";
+				htmlpart += data[i].name+" is a "+data[i].type+" with age "+data[i].age+" years and weight "+data[i].weight+"kg and likes "+data[i].likes;
+				p.innerHTML = htmlpart;
+				content.append(p);
+				// console.log(tr);
+				htmlpart="";
+			}
+
+		}
+
+		
+
+	</script>
+
+</body>
+</html>

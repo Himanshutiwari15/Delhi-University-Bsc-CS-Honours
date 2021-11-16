@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practical 4</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    table{
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: 80%;
+      margin: auto;
+    }
+    td,th{
+      border: 1px solid black;
+      padding: 5px;
+      /* border-collapse: collapse; */
+    }
+    .center{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Printing Table from 2 to 10</h1>
+  <table class="center" id="content">
+  </table>
+  <script type="text/javascript">
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+      return color;
+    }
+
+    var tbl = document.getElementById('content');
+    var number = 2;
+    var abc = setInterval(printrow,5000);
+
+    function printrow(){
+      if (number == 10) 
+      {
+        clearInterval(abc);
+      }
+      var result = "";
+      for(var i = 1; i<= 10; i++){
+        result = result + "<td>"+ number + "*" + i + "=" + number * i+"</td>";
+      }
+      number++;
+      var row = document.createElement('tr');
+      row.style.color= getRandomColor();
+      row.style.fontSize = (number+10)+"px";
+      row.innerHTML=result;
+      tbl.append(row);
+
+    }
+  </script>
+
+</body>
+</html>

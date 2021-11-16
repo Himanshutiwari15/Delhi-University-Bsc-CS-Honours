@@ -1,0 +1,37 @@
+[
+	{
+		"name":"Pluto",
+		"age":3,
+		"weight":12,
+		"type":"Pavellion",
+		"likes":"eating, playing with ball"
+	},
+	{
+		"name":"Hulk",
+		"age":4,
+		"weight":22,
+		"type":"German Sefford",
+		"likes":"Biting, eating flesh"
+	},
+	{
+		"name":"Jerry",
+		"age":2.5,
+		"weight":8,
+		"type":"cat",
+		"likes":"sleeping"
+	},
+	{
+		"name":"Tom",
+		"age":0.5,
+		"weight":0.7,
+		"type":"Mouse",
+		"likes":"running, eating cheese"
+	},
+	{
+		"name":"Chiku",
+		"age":1,
+		"weight":1.2,
+		"type":"Rabbit",
+		"likes":"running, eating carrot"
+	}
+]
